@@ -1,0 +1,14 @@
+<h1>Comparing Angular 1 Components to the latest Angular Components</h1>
+
+<p>
+	<a href="https://coryrylan.com/blog/comparing-angular-1-components-to-the-latest-angular-components">Tutorial at coryrylan.com</a>
+</p>
+
+<div *ngFor="let product of products">
+	<app-product-item [product]="product" (select)="selectedProduct = $event"></app-product-item>
+</div>
+
+<hr />
+
+<h3>{{selectedProduct.name}}</h3>
+<p>{{selectedProduct.price | currency:'USD':true:'1.2-2'}}</p>
